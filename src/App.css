@@ -7,9 +7,15 @@
   pointer-events: none;
 }
 
+.User-avatar{
+  height: 40vmin;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
+  }
+  .User-avatar{
+    animation: slidein infinite 20s linear alternate ;
   }
 }
 
@@ -28,6 +34,115 @@
   color: #61dafb;
 }
 
+.calculator{
+  display: flex;
+  height: 100%;
+}
+
+.textInput{
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 20px;
+  box-shadow: #282c34;
+  font-size: 20px;
+  display:inline-flexbox;
+}
+
+.numberInput{
+  margin-left: 10px;
+  border-radius: 20px;
+  font-size: 20px;
+  box-shadow: #282c34;
+}
+
+.submit-button{
+  font-size: 15px;
+  border-radius: 10px;
+  font-weight: 1000;
+  background-color: #61dafb;
+  text-align: center;
+}
+
+.player-Form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 8hv;
+  background-color: #61dafb;
+  
+}
+
+.nav__brand{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  color: azure;
+
+}
+
+.nav__menu{
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  gap:3rem
+}
+
+.nav__link{
+  display: flex;
+  font-size: 20px;
+}
+
+.nav__toggler div{
+  width: 2rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background-color: grey;
+}
+.nav__toggler{
+  cursor: pointer;
+  display: none
+}
+
+@media screen and (max-width: 700px){
+    .nav__toggler{
+      display: block;
+      
+    }
+    .nav__menu{
+      position: fixed;
+      top: 1.1rem;
+      right: 0;
+      height: 43vh;
+      width: 20%;
+      background-color: #61dafb;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: 0.5s ease-in;
+    }
+}
+
+.nav__active{
+  transform: translateX(0);
+}
+
+/* Toggler icon animation*/
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px, 8.5px)
+}
+.toggle .line2{
+  opacity: 0;
+}
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px, -8.5px);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +151,12 @@
     transform: rotate(360deg);
   }
 }
+@keyframes slidein {
+  from{
+    transform:translateX(-600px) ;
+  }
+  to{
+    transform: translateX(600px);
+  }
+}
+
