@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Clock from './components/Clock.js';
+import Clock from './components/Clock.jsx';
 import MyComponent from './components/MyComponent';
 import MyButtonLog from './components/ButtonLog';
 import Numbers from './components/Numbers'
