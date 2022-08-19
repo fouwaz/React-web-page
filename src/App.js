@@ -7,6 +7,8 @@ import Numbers from './components/Numbers'
 import Form from './components/Form'
 import Calculator from './Calculator';
 import NavBar from './components/navbar';
+import GetRequest from './components/GetRequest';
+import PostRequest from './components/PostRequest';
 
 const users = [
   {id: 1, name: 'Faouzi', number: '1'},
@@ -45,7 +47,8 @@ function App(props) {
         <Numbers users={users} />
         <Form />
         <Calculator />
-
+        <GetRequest/>
+        <PostRequest/>
         
         
       </header>

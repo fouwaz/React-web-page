@@ -36,7 +36,7 @@ class Form extends React.Component{
         if (event._reactName === 'onFocus'){
             target.style.background = "#61dafb"
         }
-        else if (event._reactName ==='onBlur'){
+        else if (event._reactName === 'onBlur'){
             target.style.background = 'white'
         }
         
@@ -46,6 +46,8 @@ class Form extends React.Component{
 
     render(){
         return(
+            <fieldset className='fieldset'>
+            <legend>Sign up to our football team</legend>
             <form onSubmit={this.handleSubmit} className='player-Form'>
                 <label>
                     Name
@@ -71,6 +73,7 @@ class Form extends React.Component{
                 </label>
                 <div><input className='submit-button' type='submit' value='Submit here lad!'/> </div>
             </form>
+            </fieldset>
             
         )
     }
